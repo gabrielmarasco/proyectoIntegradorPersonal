@@ -1,0 +1,19 @@
+footer {
+  background-color: #40404040;
+  margin-top: auto;
+}
+.mybg {
+  background-color: #40404040;
+}
+.img-carusel-w {
+  max-height: 900px;
+}
+.mym {
+  margin-top: 50px;
+}
+.userLogImg {
+  width: 50px;
+  padding: 5px;
+  padding-bottom: 10px;
+  border-radius: 50%;
+}

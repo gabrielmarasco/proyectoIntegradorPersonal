@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head') %>
+  <body>
+    <%- include('./partials/header') %>
+    <hr />
+    <h1 class="text-center">PRODUCTS</h1>
+    <hr />
+    <div
+      class="container-fluid p-3 d-flex flex-wrap justify-content-around mt-5"
+    >
+      <% for( let i = 0; i < prods.length; i++ ) { %>
+
+      <div class="card mt-3" style="width: 18rem">
+        <a href="/products/show/<%= prods[i].id%>">
+          <img
+            src="<%=prods[i].imgProduct%>"
+            class="card-img-top"
+            alt="<%=prods[i].model%>"
+        /></a>
+
+        <div class="card-body">
+          <h5 class="card-title"><%=prods[i].model%></h5>
+          <p class="card-text"><%= prods[i].description %></p>
+          <a href="/products/show/<%= prods[i].id%>" class="btn btn-primary"
+            >Details</a
+          >
+        </div>
+      </div>
+
+      <% } %>
+    </div>
+
+    <%- include('./partials/footer') %>
+  </body>
+</html>

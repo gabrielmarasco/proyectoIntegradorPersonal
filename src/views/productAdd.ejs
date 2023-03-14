@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head') %>
+  <body>
+    <%- include('./partials/header') %>
+
+    <div class="container-fluid m-auto mt-5">
+      <hr />
+      <h1 class="text-center bg-body-tertiary">PRODUCT ADD</h1>
+      <hr />
+      <form
+        action="/products/store"
+        class="d-flex flex-column w-50 m-auto text-center border p-3 bg-body-tertiary"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+        <label>Brand</label>
+        <input type="text" name="brand" required />
+
+        <label>Model</label>
+        <input type="text" name="model" required />
+
+        <label>Year</label>
+        <input type="number" name="year" required />
+
+        <label>Category</label>
+        <input type="text" name="category" required />
+
+        <label>Description</label>
+        <input type="text" name="description" required />
+
+        <label>Price</label>
+        <input type="number" name="price" required />
+
+        <label for="avatar">Picture</label>
+        <input type="file" name="imgProduct" />
+
+        <button class="mt-3" type="submit">ADD</button>
+      </form>
+    </div>
+    <%- include('./partials/footer') %>
+  </body>
+</html>

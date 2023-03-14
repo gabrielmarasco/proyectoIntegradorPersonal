@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head') %>
+  <body>
+    <%- include('./partials/header') %>
+
+    <div class="container-fluid m-auto mt-5">
+      <h1 class="text-center">REGISTER</h1>
+      <form
+        action="/login/store"
+        class="d-flex flex-column w-50 m-auto text-center"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+        <label>Name</label>
+        <input type="text" name="name" required />
+
+        <label>LastName</label>
+        <input type="text" name="lastName" required />
+
+        <label>Email</label>
+        <input type="email" name="email" required />
+
+        <label>Password</label>
+        <input type="password" name="password" required />
+
+        <label>Adress</label>
+        <input type="text" name="adress" required />
+
+        <label for="avatar">Foto de perfil</label>
+        <input type="file" name="img" />
+
+        <button class="mt-3" type="submit">Register</button>
+      </form>
+    </div>
+
+    <%- include('./partials/footer') %>
+  </body>
+</html>

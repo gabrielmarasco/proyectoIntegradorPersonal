@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head') %>
+
+  <body class="bg-secondary-subtle">
+    <div class="container-fluid d-flex flex-column">
+      <%- include('./partials/header') %>
+      <div id="carouselExample" class="carousel slide mx-auto mt-3">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <a href="/products/5">
+              <img
+                src="./images/135-1.jpg"
+                class="d-block rounded w-100 img-carusel-w"
+                alt="135-img"
+            /></a>
+          </div>
+          <div class="carousel-item">
+            <a href="/products/13">
+            <img
+              src="./images/gtc-1.jpg"
+              class="d-block rounded w-100 img-carusel-w"
+              alt="gtc-img"
+            />
+          </div></a>
+          <div class="carousel-item">
+            <a href="/products/12">
+            <img
+              src="./images/q8-1.jpg"
+              class="d-block rounded w-100 img-carusel-w"
+              alt="q8-img"
+            /></a>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <div class="container-fluid d-flex mt-3 justify-content-around flex-wrap">
+        <div class="card mt-3" style="width: 18rem">
+          <img src="./images/208-1.jpg" class="card-img-top" alt="208-img" />
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img src="./images/f150-1.jpg" class="card-img-top" alt="f150-img" />
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img src="./images/taos-1.jpg" class="card-img-top" alt="taos-img" />
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img
+            src="./images/vento-1.jpg"
+            class="card-img-top"
+            alt="vento-img"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+
+      <%- include('./partials/footer') %>
+    </div>
+  </body>
+</html>

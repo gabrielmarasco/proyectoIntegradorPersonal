@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head') %>
+  <body>
+    <%- include('./partials/header') %>
+    <div class="card mt-3 w-75 m-auto" style="width: 18rem">
+      <img
+        src="<%=prod.imgProduct%>"
+        class="card-img-top"
+        alt="<%=prod.model%>"
+      />
+
+      <div class="card-body">
+        <h5 class="card-title"><%=prod.model%></h5>
+        <p class="card-text"><%= prod.description %></p>
+        <a href="/cart/<%= prod.id%>" class="btn btn-primary">Comprar</a>
+      </div>
+    </div>
+    <%- include('./partials/footer') %>
+  </body>
+</html>
