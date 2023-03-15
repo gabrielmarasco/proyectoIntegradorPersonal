@@ -5,7 +5,7 @@
     <%- include('./partials/header') %>
     <div class="container-fluid mt-3 w-50 mt-5">
       <h1 class="text-center mt-3">Login</h1>
-      <form class="d-flex flex-column mb-3">
+      <form action="/login" method="POST" class="d-flex flex-column mb-3">
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Email</label>
           <input
@@ -13,6 +13,7 @@
             class="form-control"
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
+            name="email"
           />
         </div>
         <div class="mb-3">
@@ -21,6 +22,7 @@
             type="password"
             class="form-control"
             id="exampleInputPassword1"
+            name="password"
           />
         </div>
 

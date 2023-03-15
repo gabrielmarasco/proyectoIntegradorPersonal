@@ -3,17 +3,23 @@ const db = require('../database/models');
 const sequelize = db.sequelize;
 const { Op } = require('sequelize');
 const bcrypt = require('bcrypt');
+const User = db.User;
+
 const { validationResult } = require('express-validator');
 
 const controller = {
   login: (req, res) => {
     res.render('login');
   },
-  processLogin: async (req, res) => {},
+  processLogin: (req, res) => {
+    let errors = validationResult(req);
+    if (!errors.isEmpty()) {
+    }
+  },
 
   list: async (req, res) => {
     try {
-      let users = await db.User.findAll();
+      let users = await User.findAll();
       res.render('login', { users: users });
     } catch (e) {
       console.log(e);
@@ -26,7 +32,7 @@ const controller = {
 
   store: async (req, res) => {
     try {
-      let newUser = await db.User.create({
+      let newUser = await User.create({
         name: req.body.name,
         lastName: req.body.lastName,
         email: req.body.email,
@@ -41,6 +47,9 @@ const controller = {
     } catch (e) {
       console.log(e);
     }
+  },
+  profile: (req, res) => {
+    res.render('profile');
   },
 };
 
